@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Contatos</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a; /* fundo dark */
+      color: #e2e8f0;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      padding: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      background: #020617;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    .container {
+      margin: 30px auto;
+      width: 90%;
+      max-width: 600px;
+      background: #020617;
+      padding: 20px;
+      border-radius: 15px;
+      border: 1px solid #1e293b;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      background: #2563eb;
+      color: white;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    input {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 80%;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      background: #0f172a;
+      color: white;
+    }
+
+    input::placeholder {
+      color: #64748b;
+    }
+
+    .contact {
+      background: #0f172a;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      text-align: left;
+      border: 1px solid #1e293b;
+    }
+
+    strong {
+      color: #38bdf8;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>📒 Lista de Contatos</header>
+
+<div class="container">
+
+  <h2>Ações</h2>
+
+  <button onclick="showFirst()">Primeiro</button>
+  <button onclick="showLast()">Último</button>
+  <button onclick="showAll()">Todos</button>
+
+  <h3>Adicionar Novo Contato</h3>
+
+  <input type="text" id="name" placeholder="Nome">
+  <input type="text" id="phone" placeholder="Telefone">
+  <input type="email" id="email" placeholder="Email">
+
+  <button onclick="addContact()">Adicionar</button>
+
+  <h2>Contatos</h2>
+  <div id="output"></div>
+
+</div>
+
+<script src="loops.js"></script>
+
+</body>
+</html>
